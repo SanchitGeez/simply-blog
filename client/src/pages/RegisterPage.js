@@ -14,8 +14,12 @@ function RegisterPage() {
       headers:{'Content-Type':'application/json'}
     })
 
-    if(response.ok===false){
-      alert('Registeration Failed. Try again')
+    if(response.status===200){
+      alert('Regiteration Successfull, Happy Blogging!');
+
+    }
+    else{
+      alert('Registeration Failed. Try again');
     }
 
   }
