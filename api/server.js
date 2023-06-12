@@ -2,13 +2,17 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
+const User =require('./models/User');
 
 app.use(cors());
 app.use(express.json());
 
-app.post('/register',(req,res)=>{
+mongoose.connect('mongodb://127.0.0.1:27017/blogdb');
+
+app.post('/register',async (req,res)=>{
     const {username,password} = req.body;
-    res.json({requestData:{username,password}});
+    const userDoc = await User.create({username,password});
+    res.json(userDoc);
 });
 
 
