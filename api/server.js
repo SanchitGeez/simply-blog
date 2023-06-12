@@ -11,8 +11,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/blogdb');
 
 app.post('/register',async (req,res)=>{
     const {username,password} = req.body;
-    const userDoc = await User.create({username,password});
-    res.json(userDoc);
+    try {
+        const userDoc = await User.create({username,password});
+        res.json(userDoc);
+    } catch (error) {
+        res.status(400).json(error);
+    }
+    
 });
 
 
