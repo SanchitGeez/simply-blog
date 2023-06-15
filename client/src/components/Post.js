@@ -1,20 +1,19 @@
 import React from 'react'
-
-function Post() {
+import {format} from 'date-fns'
+function Post({title,summary,cover,content,createdAt,author}) {
   return (
     <div className="post">
         <div className='image'>
-          <img src="https://www.livemint.com/lm-img/img/2023/06/09/600x338/Porsche_911_1686313160647_1686313169056.JPG" alt="post-image"/>
+          <img src={'http://localhost:4000/'+ cover} alt="post"/>
         </div>
         
         <div className='texts'>
-          <h2>Back
-          Porsche 911 Reimagined by Singer: Posher Than Ever</h2>
+          <h2>{title}</h2>
           <p className="info">
-            <a href="" className="author">Sanchit Gupta</a>
-            <time>20-6-03 16:45</time>
+            <a href='/' className="author">{author.username}</a>
+            <time>{format((new Date(createdAt)), 'd MMM, yyyy -HH:mm')}</time>
           </p>
-          <p className='summary'>SPEAK MEMORY Singer Vehicle Design in Torrance, Calif., restores and modifies classic Porsche 911 Carreras from 1989-1994. The air-cooled, largely analog cars represent a ‘sweet spot’ in Porsche’s history</p>
+          <p className='summary'>{summary}</p>
         </div>
         
          
