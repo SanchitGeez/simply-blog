@@ -15,7 +15,7 @@ function RegisterPage() {
     })
 
     if(response.status===200){
-      alert('Regiteration Successfull, Happy Blogging!');
+      alert('Regiteration Successfull, Login to Create your first blog.');
 
     }
     else{
@@ -27,9 +27,9 @@ function RegisterPage() {
   return (
         <form onSubmit={register} className='register'>
             <h1>REGISTER</h1>
-            <input type="text" placeholder='Username' value={username} onChange={ev=>setUsername(ev.target.value)}/>
-            <input type="password" placeholder='Password'value={password} onChange={ev=>setPassword(ev.target.value)}/>
-            <button type="submit">REGISTER</button>
+            <input style={{padding: "10px",border:"solid 2px #dd4343",borderRadius:"0px",margin:"15px 0px"}} type="text" placeholder='Username' value={username} onChange={ev=>setUsername(ev.target.value)}/>
+            <input style={{padding: "10px",border:"solid 2px #dd4343",borderRadius:"0px",margin:"15px 0px"}} type="password" placeholder='Password'value={password} onChange={ev=>setPassword(ev.target.value)}/>
+            <button style={{padding: "10px",borderRadius:"0px",margin:"15px auto", width:"50%",}} type="submit">REGISTER</button>
         </form>
   )
 }

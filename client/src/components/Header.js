@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
-function Header() {
-  const [username,setUsername]=useState(null);
+function Header(props) {
+  const [username,setUsername]=useState(props.un);
   useEffect(()=>{
     fetch('http://localhost:4000/profile',{
       credentials:'include',
@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <header>
-        <Link to="/" className="logo">My Blog</Link>
+        <Link to="/" className="logo">SimplyBlog</Link>
         <nav>
           {username && (
             <>
