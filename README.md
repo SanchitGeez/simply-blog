@@ -5,7 +5,7 @@ A Simple and Minimal Blogging Platform where people can come together and share 
 
 ## Demo
 
-![Demo GIF](client\public\demo.gif)
+![Demo GIF](https://github.com/SanchitGeez/simply-blog/blob/main/client/public/demo.gif)
 
 
 ## Installation
