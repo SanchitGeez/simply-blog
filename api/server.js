@@ -33,6 +33,7 @@ app.post('/register',async (req,res)=>{
         res.status(400).json(error);
     }
     
+
 });
 
 app.post('/login',async (req,res)=>{
@@ -50,7 +51,7 @@ app.post('/login',async (req,res)=>{
             });
         });
     }else{
-        res.status(400).json('wrong credentials');
+        res.status(400).json('wrong credentials!');
     }
 });
 
