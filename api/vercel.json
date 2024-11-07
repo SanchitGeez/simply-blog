@@ -1,6 +1,6 @@
 {
     "version":2,
-    "name":"investra-backend",
+    "name":"simply-blog-backend",
     "builds": [
       {
         "src": "server.js",
