@@ -22,7 +22,7 @@ const salt = bcrypt.genSaltSync(10);
 const secret = 'ynkyep6uwh'
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/blogdb');
+mongoose.connect('mongodb+srv://sanchit3546:bhaPlMqb0Rlzr4xZ@cluster0b.n3ojw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0b');
 
 app.post('/register',async (req,res)=>{
     const {username,password} = req.body;
