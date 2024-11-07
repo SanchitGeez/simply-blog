@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 function Header(props) {
   const [username,setUsername]=useState(props.un);
   useEffect(()=>{
-    fetch('http://localhost:4000/profile',{
+    fetch('https://simply-blog-backend.vercel.app/profile',{
       credentials:'include',
     }).then(response=>{
         response.json().then(userInfo=>{
@@ -15,7 +15,7 @@ function Header(props) {
 
   //invalidate dookie
   function logout(ev) {
-    fetch('http://localhost:4000/logout',{
+    fetch('https://simply-blog-backend.vercel.app/logout',{
       credentials:'include',
       method:'POST'
     });

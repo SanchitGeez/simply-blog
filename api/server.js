@@ -111,6 +111,9 @@ app.get('/post/:id',async(req,res)=>{
     res.json(postDoc);
 })
 
+app.get('/', (req,res)=>{
+    res.send("Backend home");
+});
 
 app.listen(4000);
 

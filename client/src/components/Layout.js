@@ -6,7 +6,8 @@ import { Outlet } from 'react-router-dom'
 function Layout() {
   const [username, setUsername] = useState();
   useEffect(()=>{
-    fetch('http://localhost:4000/profile',{
+    //fetch('http://localhost:4000/profile',{
+    fetch('https://simply-blog-backend.vercel.app/profile',{
       credentials:'include',
     }).then(response=>{
         response.json().then(userInfo=>{
